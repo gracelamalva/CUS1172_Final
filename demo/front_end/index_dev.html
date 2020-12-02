@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Course Selection</title>
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+        <link rel = "stylesheet" href = "app_css.css"></link>
+        <script src = "app_cod_dev.js"></script>
+    </head>
+
+    <body>
+        <form onsubmit = "return false;" id = "queryForm">
+            <label for= "nameQuery">Search by: </label> <br/>
+            <input type = "text" id = "nameQuery" name = "nameQuery" value = ""></input>
+            <input id = "queryByName" type = "button" onclick= "updateView(this)" value = "Query" data-querytype = "by_name"></input>
+        </form>
+
+        <div id = "results">
+
+        </div>
+
+        <script id = "show_results_view" type = "text/x-handlebars-template">
+            <ul>
+                {{#each courses}}
+                <li>id: {{this.course_code}} | coursename: {{this.title}} | instructor: {{this.instructor}} | level: {{this.course_level}}</li>
+                {{/each}}
+            </ul>
+        </script>
+        
+    </body>
+</html>

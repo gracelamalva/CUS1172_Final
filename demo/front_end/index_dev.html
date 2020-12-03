@@ -1,16 +1,36 @@
 <html>
     <head>
         <title>Course Selection</title>
+        <script src = "app_code_dev.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
-        <link rel = "stylesheet" href = "app_css.css"></link>
-        <script src = "app_cod_dev.js"></script>
+        <link rel = "stylesheet" href = "app_css.css" ></link>
+        
     </head>
 
     <body>
         <form onsubmit = "return false;" id = "queryForm">
-            <label for= "nameQuery">Search by: </label> <br/>
+            <label for= "nameQuery">Search by instructor: </label> <br/>
             <input type = "text" id = "nameQuery" name = "nameQuery" value = ""></input>
-            <input id = "queryByName" type = "button" onclick= "updateView(this)" value = "Query" data-querytype = "by_name"></input>
+            <input id = "queryByName" type = "button" onclick= "updateView(this)" value = "Query" data-querytype = "by_instructor"></input>
+
+            <br>
+
+            <label for= "titleQuery"> Search by course title: </label> <br/>
+            <input type = "text" id = "titleQuery" name = "titleQuery" value = "" > </input>
+            <input id = "queryByTitle" type = "button" onclick = "updateView(this)" value = "Query" data-querytype="by_title"> </input>
+            <br>
+
+            <label for= "levelQuery"> Search by course level: </label> <br/>
+            <input type = "text" id = "levelQuery" name = "levelQuery" value = "" > </input>
+            <input id = "queryByLevel" type = "button" onclick = "updateView(this)" value = "Query" data-querytype="by_level"> </input>
+
+            <br>
+
+            <label for= "combinedQuery"> Search by Instructor and Level: </label> <br/>
+            <input type = "text" id = "instructorQuery" name = "intructorQuery" value = "" > </input>
+            <input type = "text" id = "levelQuery" name = "levelQuery" value = "" > </input>
+            <input id = "queryCombined" type = "button" onclick = "updateView(this)" value = "Query" data-querytype="combined_query"> </input>
+
         </form>
 
         <div id = "results">

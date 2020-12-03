@@ -2,6 +2,9 @@
 var express = require ('express');
 var app = express();
 
+app.set('views', __dirname + '/demo/front_end');
+app.engine('html', require('ejs').renderFile);
+
 const fs = require('fs')
 let rawdata = fs.readFileSync('./courses.json');
 let course = JSON.parse(rawdata);
@@ -80,7 +83,7 @@ app.get('/api/combined_query/:qname/:qlevel', (req,res) => {
 })
 
 app.get('/demo/index_dev', (req,res) => {
-    res.render('/demo/front_end/index_dev.html')
+    res.render('index_dev.html')
 })
 
 

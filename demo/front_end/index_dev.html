@@ -6,13 +6,13 @@
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script src="/demo/app_code_dev.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" crossorigin="anonymous">
     </link>
 
 </head>
 
 <body style="display: block; text-align: center;">
-    <img src="demo/download.png" />
+    <img src="/demo/download.png" />
     <hr />
     <h1>Browse Courses</h1>
     <div id="course_form" class="justify-content-center">
@@ -64,7 +64,7 @@
             <div class = "col">
             <h4 class = "text-center"> Courses </h4>     
                 {{#each courses}}
-                <div class = "card" style = "width:350px; height: 300px;">
+                <div class = "card mb-2" style = "width:350px; height: 300px;">
                     <div class = "card-body">
                 <div class = "card-title"><h4>{{this.title}}</h4> </div>
                 <hr>

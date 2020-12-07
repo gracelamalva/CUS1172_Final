@@ -1,6 +1,7 @@
 //npm install express in terminal
 var express = require ('express');
 var app = express();
+var port = process.env.PORT || 3000;
 
 app.set('views', __dirname + '/demo/front_end');
 app.engine('html', require('ejs').renderFile);
@@ -15,7 +16,7 @@ app.get('/', (req, res) => {
 
 app.use('/demo', express.static('demo/front_end'));
 
-app.listen(3000, function() {
-    console.log('Server is running on port 3000');
+app.listen(port, function() {
+    console.log('Server is running on port' + port);
    
 })

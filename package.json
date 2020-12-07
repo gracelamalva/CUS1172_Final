@@ -1,0 +1,24 @@
+{
+  "name": "cus1172_final",
+  "version": "1.0.0",
+  "description": "As part of this project, you need to design, implement and deploy a RESTful API according to the use-case specification below. Moreover, you are expected to create a minimalistic front-end application to that demonstrates  the functionality of the API. This project has several deliverables you are expected to submit are are listed in the Deliverables section below (submission links for each deliverable is provided on Canvas)",
+  "main": "api_routes_dev.js",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gracelamalva/CUS1172_Final.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gracelamalva/CUS1172_Final/issues"
+  },
+  "homepage": "https://github.com/gracelamalva/CUS1172_Final#readme"
+}

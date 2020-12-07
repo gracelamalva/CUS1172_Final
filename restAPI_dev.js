@@ -7,6 +7,11 @@ app.engine('html', require('ejs').renderFile);
 
 var api_routes = require('./api_routes_dev.js');
 app.use('/api', api_routes)
+app.get('/', (req, res) => {
+
+    res.render("index_dev.html");
+     
+ })
 
 app.use('/demo', express.static('demo/front_end'));
 

@@ -6,11 +6,13 @@ let rawdata = fs.readFileSync('./courses.json');
 let course = JSON.parse(rawdata);
 
 router.get('/', (req, res) => {
-    let outJSON = {
+   /* let outJSON = {
         courses : course["courses"]
     }
 
     res.json(outJSON);
+    */
+ 
     
 })
 
